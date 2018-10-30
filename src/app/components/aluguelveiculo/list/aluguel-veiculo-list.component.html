@@ -1,0 +1,20 @@
+<div>
+<table>
+  <thead>
+      <tr>
+        <td>Modelo</td>
+        <td>Placa</td>
+        <td>Ano</td>
+        <td>Fabricante</td>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let veiculo of list">
+      <td>{{veiculo.modelo}}</td>
+      <td>{{veiculo.placa}}</td>
+      <td>{{veiculo.ano}}</td>
+      <td>{{veiculo.fabricante}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,27 @@
+<form>
+  <div>
+    Selecione a Fabricante:
+    <select [(ngModel)]="carro.modelo.fabricante.id" name="id" (click)="buscarModelo()">
+      <option value='null' selected>-Selecione um valor-</option>
+      <option *ngFor="let fabri of listf" value="{{fabri.id}}">{{fabri.nome}}</option>
+    </select>
+  </div>
+  <div>
+    Selecione o Modelo:
+    <select [(ngModel)]="carro.modelo.id" name="id">
+      <option value='null' selected>-Selecione um valor-</option>
+      <option *ngFor="let modelo of listm" value="{{modelo.id}}">{{modelo.nome}}</option>
+    </select>
+  </div>
+  <div>
+      Placa:
+      <input type="text" name="placa" [(ngModel)]="carro.placa">
+  </div>
+  <div>
+     Ano:
+     <input type="text" name="ano" [(ngModel)] = "carro.ano">
+  </div>
+  <button type="submit" (click)="salvar()">Salvar</button>
+
+  {{erro}}
+</form>
